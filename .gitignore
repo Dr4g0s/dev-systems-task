@@ -1,0 +1,15 @@
+# .gitignore
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+venv/
+
+# Media and Static directories
+/media/
+!/media/.gitkeep
+/static/
+!/static/.gitkeep

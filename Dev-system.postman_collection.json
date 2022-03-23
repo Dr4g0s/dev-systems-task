@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "01cbbb2c-b68d-404d-924e-f45e09037975",
+		"name": "Dev-system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "name",
+							"type": "text"
+						},
+						{
+							"key": "country_code",
+							"value": "EG",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "+201235050500",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "male",
+							"type": "text"
+						},
+						{
+							"key": "birthdate",
+							"value": "2020-01-01",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/D:/Photo/photos/15895130_206281136500562_6024680755409786534_n.jpg"
+						},
+						{
+							"key": "email",
+							"value": "test@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/create-user/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"create-user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate user (login)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone_number",
+							"value": "+201235050500",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4Njc1Mjg5LCJpYXQiOjE2NDgwNzA0ODksImp0aSI6IjliOGQzYjM2NjJmYzQyOTc4MmMxYTkyMjQ3MmVjMTZkIiwidXNlcl9pZCI6M30.z5Lvfdz_IEl2egwZESy90j2qU215Zc3Bx-QYN6-ssZU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "status",
+							"value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/create-status/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"create-status",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
